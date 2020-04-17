@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Risk-storming</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="./css/bootstrap-3.3.2.min.css" rel="stylesheet" media="screen">
+    <link href="./css/bootstrap-theme-3.3.2.min.css" rel="stylesheet" media="screen">
+    <link href="./css/riskstorming.css" rel="stylesheet" media="screen">
+    <link href='./css/open-sans.css' rel='stylesheet' type='text/css' />
+
+    <script src="./js/jquery-2.0.3.min.js"></script>
+    <script src="./js/bootstrap-3.3.2.min.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        <div id="header">
+            <div class="container">
+                <h1>Risk-storming</h1>
+                <h2>A visual and collaborative risk identification technique</h2>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 centered">
+                        Step 1: Draw some software architecture diagrams
+                        <p class="smaller">
+                            Draw one or more diagrams to show what you're planning to build or change, ideally at different levels of abstraction (e.g. using the <a href="https://c4model.com" target="_blank">C4 model</a>). 
+                        </p>
+                    </div>
+                    <div class="col-sm-3 centered">
+                        Step 2: Identify the risks individually
+                        <p class="smaller">
+                            Gather people in front of the diagrams, and ask them to identify what they personally perceive to be risky.
+                            Write a summary of each risk on a separate sticky note, colour coded to represent low, medium, and high priority risks.   
+                            Timebox this exercise (e.g. 10 minutes), and do it in silence.
+                        </p>
+                    </div>
+                    <div class="col-sm-3 centered">
+                        Step 3: Converge the risks on the diagrams
+                        <p class="smaller">
+                            Ask everybody to place their sticky notes onto the diagrams, sticking them in close proximity to the area where the risk has been identified.
+                        </p>
+                    </div>
+                    <div class="col-sm-3 centered">
+                        Step 4: Review and summarise the risks
+                        <p class="smaller">
+                            Review and summarise the output, especially focussing on risks that only one person identified, or risks where multiple people disgree on the priority. 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 centered">
+                        <img src="./img/risk-storming-1.png" alt="Converge the risks on the diagrams" class="img-thumbnail" />
+                    </div>
+                    <div class="col-sm-4 centered">
+                        <img src="./img/risk-storming-2.png" alt="Converge the risks on the diagrams" class="img-thumbnail" />
+                    </div>
+                    <div class="col-sm-4 centered">
+                        <img src="./img/risk-storming-3.png" alt="Converge the risks on the diagrams" class="img-thumbnail" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <h2>Background</h2>
+                <p>
+                    There is risk inherent with building any piece of software; whether you're building a completely new greenfield project, or adding a new feature to an existing codebase.
+                    A risk is a possibility that something bad can happen, there being different types of risks, each with their own potential consequence.
+                    Risks come in all shapes and sizes, and can be associated with:
+                </p>
+        
+                <ul>
+                    <li><b>People</b>: Does the team have the appropriate number of people? Do they have the appropriate skills? Do the team members work well together? Will the leadership roles be undertaken appropriately? Can training or consultants be brought in to help address skill gaps? Will we be able to hire people with the same skills in the future, for maintenance purposes? Does the operations and support team have the appropriate skills to run and look after the software? How likely is it that a key person will leave the team/organisation?</li>
+                    <li><b>Process</b>: Does the team understand how they are going to work? Is there a described process? Are there expected outputs and artefacts? Is there enough budget available, both now and in the future? Are there any outside events (e.g. major changes in business, mergers/acquisitions, legal or regulatory changes, etc) that could disrupt progress of the work?</li>
+                    <li><b>Technology</b>: Will the proposed architecture be able to satisfy the key quality attributes? Will the technology work as expected? Is the technology stable enough to build upon?</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <h2>Quantifying and prioritising risks</h2>
+                <p>
+                    It's often difficult to prioritise which risks you should take care of and, if you get it wrong, you'll put the risk mitigation effort in the wrong place.
+                    For example, a risk related to your software project failing should be treated as higher priority than a risk related to the team encountering some short-term discomfort.
+                    How do you quantify each of the risks, and assess their relative priorities then?
+                </p>
+
+                <p>
+                    One way to do this is to map each risk onto a matrix, where you evaluate the <b>probability</b> of that risk happening against the negative <b>impact</b> of it happening.
+                </p>
+
+                <ul>
+                    <li><b>Probability</b>: How likely is it that the risk will happen?</li>
+                    <li><b>Impact</b>: What is the negative impact if the risk does occur?</li>
+                </ul>
+
+                <p>
+                    Both probability and impact could be quantified as low/medium/high or as a numeric value (1-3, 1-5, etc). The following diagram illustrates what a typical risk matrix might look like.
+                </p>
+
+                <br />
+                
+                <p class="centered">
+                    <img src="./img/quantifying-risk-1.png" alt="A probability/impact matrix for quantifying risk" class="img-thumbnail" />
+                </p>
+
+                <br />
+
+                <p>
+                    Some examples of the probability and impact include:
+                </p>
+
+                <ul>
+                    <li><b>Low probability</b>: The chance of the risk happening is low; we don't think the risk will happen.</li>
+                    <li><b>High probability</b>: The chance of the risk happening is high; there's a very real possibility that the risk will happen.</li>
+                    <li><b>Low impact</b>: Short-term discomfort for the team (minor rework, extended hours), minor outages, accumulation of additional unwanted technical debt, etc.</li>
+                    <li><b>High impact</b>: Project is cancelled, staff fired, major outages, major data loss, loss of public reputation, loss of income, law suits, etc.</li>
+                </ul>
+
+                <p>
+                    Prioritising risks is then about ranking each risk according to their score, which can be found by multiplying the numbers in the risk matrix together. A risk with a low probability and a low impact can be treated as a low priority risk. Conversely, a risk with a high probability and a high impact needs to be given a high priority. As indicated by the colour coding:
+                </p>
+
+                <ul>
+                        <li><b>Red</b>: a score of 6 or 9; the risk is high priority.</li>
+                        <li><b>Amber</b>: a score of 3 or 4; the risk is medium priority</li>
+                        <li><b>Green</b>: a score of 1 or 2; the risk is low priority.</li>
+                    </ul>
+
+                <p>
+                    There are other ways to quantify risks too (e.g. <a href="https://owasp.org/www-community/OWASP_Risk_Rating_Methodology" target="_blank">OWASP Risk Rating Methodology</a>)
+                    and some organisations use information security classification levels (e.g. public, restricted, confidential, top secret, etc) as the basis for understanding the risk associated with specific pieces of data being exposed by a security breach (e.g. <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/715778/May-2018_Government-Security-Classifications-2.pdf" target="_blank">UK Government Security Classifications</a>).
+                    You may also have your own formal risk evaluation approaches if you're building health and safety-critical software systems.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <h2>Identifying risks with risk-storming</h2>
+                <p>
+                    Now that we understand how to quantify risks, we need to step back and look at how to identify them in the first place.
+                    One of the worst ways to identify risks is to let a single person do this on their own.
+                    Unfortunately this tends to be the norm.
+                    The problem with asking a single person to identify risks is that you only get a view based upon their perspective, knowledge and experience.
+                    As with software development estimates, an individual's perceptions of risk will be based upon their own experience, and is therefore subjective.
+                    For example, if you're planning on using a new technology, the choice of that technology may or may not be identified as a risk depending on whether the individual identifying the risks has used it in the past.
+                </p>
+
+                <p>
+                    A better approach to risk identification is to make it a collaborative activity, and something that the whole team can participate in.
+                    This is essentially what we see with software estimates, when teams use techniques such as <a href="https://en.wikipedia.org/wiki/Planning_poker" target="_blank">Planning Poker</a> or its predecessor, <a href="https://en.wikipedia.org/wiki/Wideband_delphi" target="_blank">Wideband Delphi</a>.
+                    One approach is to run something called a <a href="https://en.wikipedia.org/wiki/Pre-mortem" target="_blank">pre-mortem</a> where you imagine that your project has failed, and you discuss/brainstorm the reasons as to why it failed, and ultimately what caused that failure.
+                </p>
+
+                <p>
+                    Another is "risk-storming"; a quick, fun, collaborative, and visual technique for identifying risk that the whole team (architects, developers, testers, project managers, operational staff, etc) can take part in.
+                    There are 4 steps:
+                </p>
+
+                <h3>1. Draw some software architecture diagrams</h3>
+                <p>
+                    The first step is to draw some architecture diagrams on whiteboards or large sheets of flip chart paper.
+                    Ideally this should be a collection of diagrams at different levels of abstraction, because each diagram (and therefore level of detail) will allow you to highlight different risks across your architecture.
+                    These diagrams should show what you are planning to build, or planning to change.
+                    The <a href="https://c4model.com" target="_blank">C4 model for visualising software architecture</a> works well.
+                </p>
+
+                <h3>2. Identify the risks (individually)</h3>
+                <p>
+                    Since risks are subjective, step 2 is about asking everybody to look at the architecture diagrams and to <b>individually</b> (i.e. in silence, without collaboration) write down the risks that they can identify, one per sticky note.
+                    Each risk should be quantified according to the probability and impact.
+                </p>
+
+                <p>
+                    Ideally, use different colour sticky notes to represent the different risk priorities (e.g. pink for high priority risks, yellow for medium, green for low).
+                    You can timebox this part of the exercise to (e.g.) 10 minutes, and this step should be done in silence, with everybody keeping their sticky notes hidden from view so they don't influence what other people are thinking.
+                </p>
+
+                <p>
+                    Here are some examples of the risks to look for:
+                </p>
+
+                <ul>
+                    <li>Data formats from third-party systems change unexpectedly.</li>
+                    <li>External systems become unavailable.</li>
+                    <li>Components run too slowly.</li>
+                    <li>Components don't scale.</li>
+                    <li>Key components crash.</li>
+                    <li>Single points of failure.</li>
+                    <li>Data becomes corrupted.</li>
+                    <li>Infrastructure fails.</li>
+                    <li>Disks fill up.</li>
+                    <li>New technology doesn't work as expected.</li>
+                    <li>New technology is too complex to work with.</li>
+                    <li>The team lacks experience of the technology.</li>
+                    <li>Off-the-shelf products and frameworks don't work as advertised.</li>
+                    <li>etc</li>
+                </ul>
+                
+                <p>
+                    The goal of risk-storming is to seek input from as many people as possible so that you can take advantage of the collective experience of the team. If you're planning on using a new technology, hopefully somebody on the team will identify that there is a risk associated with doing this. Also, one person might quantify the risk of using that new technology relatively highly, whereas others might not feel the same if they've used that same technology before. Asking people to identify risks individually allows everybody to contribute to the risk identification process, so that you'll gain a better view of the risks perceived by the team rather than only from those designing the software or leading the team.
+                </p>
+
+                <h3>3. Converge the risks on the diagrams</h3>
+                <p>
+                    Next, ask everybody to place their sticky notes onto the architecture diagrams, sticking them in close proximity to the area where the risk has been identified.
+                    For example, if you identify a risk that one of your components will run too slowly, put the sticky note over the top of that component on the most appropriate architecture diagram.
+                </p>        
+
+                <div class="row">
+                    <div class="col-sm-4 centered">
+                        <img src="./img/risk-storming-1.png" alt="Converge the risks on the diagrams" class="img-thumbnail" />
+                    </div>
+                    <div class="col-sm-4 centered">
+                        <img src="./img/risk-storming-2.png" alt="Converge the risks on the diagrams" class="img-thumbnail" />
+                    </div>
+                    <div class="col-sm-4 centered">
+                        <img src="./img/risk-storming-3.png" alt="Converge the risks on the diagrams" class="img-thumbnail" />
+                    </div>
+                </div>
+
+                <p>
+                    This part of the technique is very visual and, once complete, lets you see at a glance where the highest areas of risk are.
+                    If several people have identified similar risks you'll get a clustering of sticky notes on top of the diagrams as people's ideas converge.
+                </p>
+
+                <h3>4. Review and summarise the risks</h3>
+                <p>
+                    Finally, review and summarise the output, especially focussing on risks that only one person identified, or risks where multiple people disgree on the priority.
+                    The output should be a risk register, where all of the risks are logged with the agreed priority.
+                    If you decide that something turns out not to be a risk, keep a note of this too.
+                </p>        
+            </div>
+        </div>
+            
+        <div class="section">
+            <div class="container">
+                <h2>When to use risk-storming</h2>
+            
+                <p>
+                    Risk-storming is a quick technique that provides a collaborative way to identify and visualise risks.
+                    As an aside, this technique can be used for anything that you can visualise; from enterprise architectures through to business processes and workflows.
+                    It can be used at the start of a software development project (when you're coming up with the initial software architecture) or throughout, during iteration planning sessions or retrospectives. 
+                    Just make sure that you keep a log of the risks that are identified, including those that you later agree have a probability or impact of "none".
+                </p>
+
+                <p>
+                    Additionally, why not keep the architecture diagrams with the sticky notes on the wall of your project room so that everybody can see this additional layer of information.
+                    Identifying risks is essential in preventing project failure, and it doesn't need to be a chore if you get the whole team involved.
+                </p>
+            </div>
+        </div>
+
+        
+        <div class="section">
+            <div class="container">
+                <h2>Mitigating risks</h2>
+            
+                <p>
+                    Identifying the risks associated with your software architecture is an essential exercise, but you also need to come up with mitigation strategies, either to prevent the risks from happening in the first place, or to take corrective action if the risk does occur. Since the risks are now prioritised, you can focus on the highest priority ones first.
+                    There are a number of mitigation strategies the are applicable depending upon the type of risk, including:
+                </p>
+                    
+                <ul>
+                    <li><b>Education</b>: Training the team, restructuring it, or hiring new team members in areas where you lack experience (e.g. with new technology).</li>
+                    <li><b>Writing code</b>: Creating prototypes, proofs of concept, <a href="http://www.agilemodeling.com/essays/agileArchitecture.htm#ProveIt" target="_blank">concrete experiments</a>, <a href="https://wiki.c2.com/?WalkingSkeleton" target="_blank">walking skeletons</a>, etc where they are needed to mitigate technical risks by proving that something does or doesn't work. Since risk-storming is a visual technique, it lets you easily see the stripes through your software system that you should perhaps look at in more detail.</li>
+                    <li><b>Re-work</b>: Changing your software architecture to remove or reduce the probability/impact of identified risks (e.g. removing single points of failure, adding a cache to protect from third-party system outages, etc). If you do decide to change your architecture, you should re-run the risk-storming exercise to check whether the change has had the desired effect, and not introduced other high priority risks.</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div id="footer">
+            <div class="container">
+                <p>
+                    <a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; margin-right: 5px;" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+                    This website, example diagrams and explanatory text is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+                </p>
+
+                <p>
+                    <img src="./img/simonbrown.jpg" width="40px" alt="Simon Brown" class="img-circle" style="margin-right: 5px;" />
+                    The C4 model and this website were created by Simon Brown
+                    -
+                    <a href="https://twitter.com/simonbrown">@simonbrown</a>
+                    |
+                    <a href="http://simonbrown.je">simonbrown.je</a>
+                    |
+                    <a href="mailto:simon@architectis.je" target="_blank">simon@architectis.je</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
